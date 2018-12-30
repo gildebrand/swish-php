@@ -100,7 +100,6 @@ class Client
         $response = $this->sendRequest('POST', '/paymentrequests', [
             'json' => $this->filterRequestBody((array) $request),
         ]);
-
         return [
             'id' => Util::getObjectIdFromResponse($response),
             'token' => $response->getHeaderLine('PaymentRequestToken')
