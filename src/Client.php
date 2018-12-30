@@ -91,7 +91,7 @@ class Client
 
     /**
      * @param PaymentRequest $request
-     * @return string payment request id
+     * @return array payment request id and payment token
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws ValidationException
      */
