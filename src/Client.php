@@ -101,7 +101,10 @@ class Client
             'json' => $this->filterRequestBody((array) $request),
         ]);
 
-        return Util::getObjectIdFromResponse($response);
+        return [
+            'id' => Util::getObjectIdFromResponse($response),
+            'token' => $response->getHeaderLine('PaymentRequestToken')
+        ];
     }
 
     /**
